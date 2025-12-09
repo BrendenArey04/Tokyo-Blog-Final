@@ -1,29 +1,53 @@
+/* ================================
+Enhanced Tokyo Theme Stylesheet
+================================== */
 body {
-font-family: Arial, sans-serif;
+font-family: 'Segoe UI', sans-serif;
 margin: 0;
-padding: 0;
-background-color: #f2f2f2;
+background-color: #fff0f3;
+color: #333;
+line-height: 1.6;
+}
+
+
+h1, h2, h3 {
+font-family: 'Poppins', sans-serif;
+}
+
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
 }
 
 
 header {
-background-color: black;
+background-color: #ff385c;
 color: white;
-padding: 20px;
-text-align: center;
+padding: 15px 30px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+
+header h1 {
+margin: 0;
+font-size: 1.8rem;
+letter-spacing: 1px;
 }
 
 
 nav ul {
 list-style: none;
+margin: 0;
 padding: 0;
 display: flex;
-justify-content: center;
-}
-
-
-nav ul li {
-margin: 0 15px;
+gap: 25px;
 }
 
 
@@ -31,39 +55,14 @@ nav ul li a {
 color: white;
 text-decoration: none;
 font-weight: bold;
+position: relative;
+transition: color 0.3s ease;
 }
 
 
-.active {
-text-decoration: underline;
-}
-
-
-section {
-padding: 20px;
-background: white;
-margin: 20px;
-border-radius: 8px;
-}
-
-
-footer {
-background-color: black;
-color: white;
-text-align: center;
-padding: 10px;
-margin-top: 30px;
-}
-
-
-/* Mobile Responsive */
-@media (max-width: 600px) {
-nav ul {
-flex-direction: column;
-}
-
-
-nav ul li {
-margin: 10px 0;
-}
-}
+nav ul li a::after {
+content: "";
+position: absolute;
+bottom: -5px;
+left: 0;
+.about ul li
