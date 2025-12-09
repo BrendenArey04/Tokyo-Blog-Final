@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       q5: ["Tea Ceremony", "Anime Shopping", "Cherry Blossoms"]
     };
 
-    // Question 1 (text input)
+    // Question 1 
     const q1Input = document.getElementById("q1");
     const q1Value = q1Input ? q1Input.value.trim().toLowerCase() : "";
 
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setFeedback("f1", "Incorrect — Answer: Shibuya", false);
     }
 
-    // Question 2 (radio)
+    // Question 2
     const q2Value = getRadioValue("q2");
     if (q2Value === answers.q2) {
       score++;
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setFeedback("f2", "Incorrect — Answer: Akihabara", false);
     }
 
-    // Question 3 (radio)
+    // Question 3 
     const q3Value = getRadioValue("q3");
     if (q3Value === answers.q3) {
       score++;
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setFeedback("f3", "Incorrect — Answer: Sushi", false);
     }
 
-    // Question 4 (radio)
+    // Question 4 
     const q4Value = getRadioValue("q4");
     if (q4Value === answers.q4) {
       score++;
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setFeedback("f4", "Incorrect — Answer: Tokyo Tower", false);
     }
 
-    // Question 5 (checkboxes)
+    // Question 5 
     const q5Values = getCheckedValues("q5");
     const q5Correct = arraysEqual(q5Values, answers.q5);
 
