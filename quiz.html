@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tokyo Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="quiz.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><h1>Explore Tokyo</h1></div>
+    <button id="navToggle7" class="nav-toggle" aria-expanded="false" aria-controls="mainNav7">☰</button>
+    <nav id="mainNav7" class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="quiz.html" class="active">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-section">
+      <h2>📝 Test Your Knowledge About Tokyo!</h2>
+      <p>Answer the questions below and hit Submit. The quiz is responsive for phones and tablets.</p>
+
+      <form id="quizForm" class="quiz-form" aria-describedby="quiz-instructions">
+        <p id="quiz-instructions">There are 5 questions. A passing score is 3/5.</p>
+
+        <!-- Q1 - text -->
+        <div class="quiz-question">
+          <h3>1. Fill in the blank:</h3>
+          <label for="q1">Tokyo’s busiest pedestrian intersection is called ________ Crossing.</label>
+          <input type="text" id="q1" name="q1" required>
+          <p class="feedback" id="f1" aria-live="polite"></p>
+        </div>
+
+        <!-- Q2 - radio -->
+        <div class="quiz-question">
+          <h3>2. Which district is known for anime and gaming?</h3>
+          <fieldset>
+            <legend class="sr-only">District</legend>
+            <label><input type="radio" name="q2" value="Shibuya"> Shibuya</label><br>
+            <label><input type="radio" name="q2" value="Akihabara"> Akihabara</label><br>
+            <label><input type="radio" name="q2" value="Harajuku"> Harajuku</label>
+          </fieldset>
+          <p class="feedback" id="f2" aria-live="polite"></p>
+        </div>
+
+        <!-- Q3 - radio -->
+        <div class="quiz-question">
+          <h3>3. Which food is Tokyo known for?</h3>
+          <fieldset>
+            <legend class="sr-only">Food</legend>
+            <label><input type="radio" name="q3" value="Pizza"> Pizza</label><br>
+            <label><input type="radio" name="q3" value="Sushi"> Sushi</label><br>
+            <label><input type="radio" name="q3" value="Burgers"> Burgers</label>
+          </fieldset>
+          <p class="feedback" id="f3" aria-live="polite"></p>
+        </div>
+
+        <!-- Q4 - radio -->
+        <div class="quiz-question">
+          <h3>4. Which landmark offers incredible night views?</h3>
+          <fieldset>
+            <legend class="sr-only">Landmark</legend>
+            <label><input type="radio" name="q4" value="Tokyo Tower"> Tokyo Tower</label><br>
+            <label><input type="radio" name="q4" value="Imperial Palace"> Imperial Palace</label><br>
+            <label><input type="radio" name="q4" value="Yoyogi Park"> Yoyogi Park</label>
+          </fieldset>
+          <p class="feedback" id="f4" aria-live="polite"></p>
+        </div>
+
+        <!-- Q5 - checkbox -->
+        <div class="quiz-question">
+          <h3>5. Select all cultural experiences in Tokyo:</h3>
+          <label><input type="checkbox" name="q5" value="Tea Ceremony"> Tea Ceremony</label><br>
+          <label><input type="checkbox" name="q5" value="Anime Shopping"> Anime Shopping</label><br>
+          <label><input type="checkbox" name="q5" value="Skydiving"> Skydiving</label><br>
+          <label><input type="checkbox" name="q5" value="Cherry Blossoms"> Cherry Blossoms</label>
+          <p class="feedback" id="f5" aria-live="polite"></p>
+        </div>
+
+        <div class="quiz-controls">
+          <button type="button" id="submitBtn">Submit Quiz</button>
+          <button type="reset" id="resetBtn">Reset Quiz</button>
+        </div>
+
+        <div id="results" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>This is a Class Project</p>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle7').addEventListener('click', () => {
+      const nav = document.getElementById('mainNav7');
+      nav.classList.toggle('open');
+      document.getElementById('navToggle7').setAttribute('aria-expanded', String(nav.classList.contains('open')));
+    });
+  </script>
+</body>
+</html>
