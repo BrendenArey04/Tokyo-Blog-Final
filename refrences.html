@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>References & Research — Tokyo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><h1>Explore Tokyo</h1></div>
+    <button id="navToggle6" class="nav-toggle" aria-expanded="false" aria-controls="mainNav6">☰</button>
+    <nav id="mainNav6" class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="culture.html">Places</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="references.html" class="active">References</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content-section">
+      <h2>Topic Research — Tokyo (finalized)</h2>
+
+      <p>This research collects high-quality sources, summarises their findings, and explains how they support the content on this site.</p>
+
+      <ol class="research-list">
+        <li><strong>Japan National Tourism Organization (JNTO)</strong> — official travel information, seasonal events, and cultural guides. Useful for accurate dates and official visitor resources. (<a href="https://www.japan.travel/en/" target="_blank" rel="noopener">japan.travel</a>)</li>
+        <li><strong>Tokyo Metropolitan Government</strong> — local government site with city guides, safety information, and event calendars. Useful for logistics and official notices. (<a href="https://www.metro.tokyo.lg.jp/english/" target="_blank" rel="noopener">metro.tokyo.lg.jp</a>)</li>
+        <li><strong>Travel blogs & food journalism</strong> — Ichiran, Tsukiji, Harajuku reports and reviews (used to identify popular food spots & local tips).</li>
+        <li><strong>Academic / cultural resources</strong> — articles on hanami and cultural etiquette that informed the 'Culture' and 'Key Concepts' sections.</li>
+      </ol>
+
+      <h3>How the research was used</h3>
+      <p>The information above was used to create accurate, well-structured content across pages (food, places, and cultural practices). Each resource is cited above and was checked for reliability.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>This is a Class Project</p>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle6').addEventListener('click', () => {
+      const nav = document.getElementById('mainNav6');
+      nav.classList.toggle('open');
+      document.getElementById('navToggle6').setAttribute('aria-expanded', String(nav.classList.contains('open')));
+    });
+  </script>
+</body>
+</html>
