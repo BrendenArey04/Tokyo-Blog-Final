@@ -1,4 +1,4 @@
-// quiz.js - handles grading the Tokyo quiz
+// quiz.js - grading the Tokyo quiz
 
 document.addEventListener("DOMContentLoaded", () => {
   const submitBtn = document.getElementById("submitBtn");
