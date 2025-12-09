@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me — Brenden Arey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><h1>Explore Tokyo</h1></div>
+    <button id="navToggle2" class="nav-toggle" aria-expanded="false" aria-controls="mainNav2">☰</button>
+    <nav id="mainNav2" class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="culture.html">Places</a></li>
+        <li><a href="concepts.html">Key Concepts</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="about.html" class="active">About Me</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about">
+      <img src="https://via.placeholder.com/160" alt="Profile photo of Brenden Arey" class="profile-photo">
+      <h2>About Me</h2>
+      <p>👋 Hi! I'm <strong>Brenden Arey</strong>. I'm a 21-year-old student at Kennesaw State University (third year) pursuing Information Technology. Traveling to Japan and visiting Tokyo has been a lifelong dream of mine.</p>
+
+      <h3>✈️ My Travel Story</h3>
+      <p>I've always been inspired by Japanese culture — the food, shopping, attractions, and the way modern innovation blends with traditional culture.</p>
+
+      <h3>📸 Fun Facts</h3>
+      <ul>
+        <li>Favorite Japanese dish: Sushi</li>
+        <li>Dream destination: Shibuya</li>
+        <li>Travel tip: Research cultural norms before travelling</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>This is a Class Project</p>
+    <a href="https://kennesaw.view.usg.edu/d2l/home/3684194" target="_blank" rel="noopener">Class Website</a>
+  </footer>
+
+  <script>
+    // mobile nav toggle
+    document.getElementById('navToggle2').addEventListener('click', () => {
+      const nav = document.getElementById('mainNav2');
+      nav.classList.toggle('open');
+      const btn = document.getElementById('navToggle2');
+      btn.setAttribute('aria-expanded', String(nav.classList.contains('open')));
+    });
+  </script>
+</body>
+</html>
